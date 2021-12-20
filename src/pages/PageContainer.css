@@ -1,10 +1,13 @@
 .Container {
-  min-height: 100vh;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: 98%;
   display: flex;
   flex-direction: column;
   align-items:flex-start;
   /* font-size: calc(10px + 2vmin); */
-  color: red;
   padding: 2rem;
-  border-style: solid;
+  margin: 0;
+  /* border-style: solid;
+  border-color: red; */
 }

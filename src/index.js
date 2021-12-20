@@ -9,7 +9,8 @@ import {
 import { 
   Home,
   Projects,
-  About
+  About,
+  Connect
 } from './pages'
 
 import './index.css';
@@ -22,6 +23,7 @@ ReactDOM.render(
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/connect" element={<Connect />} />
         </Routes>
     </BrowserRouter>
     {/* <App /> */}

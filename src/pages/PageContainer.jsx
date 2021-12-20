@@ -1,8 +1,10 @@
+import Nav from '../components/nav'
 import './PageContainer.css'
 
-const PageContainer = ( { children } ) => {
+const PageContainer = ( { children, title, dark = true, className } ) => {
   return (
-    <div className="Container">
+    <div className={`Container ${className}`}>
+      <Nav title={title} dark={dark} />
       {children}
     </div>
   )

@@ -1,0 +1,18 @@
+.Logo {
+  padding: 0rem;
+  margin: 0px;
+  font-size: .9rem;
+  font-weight:600;
+}
+
+.Logo-Dark {
+  color: white;
+}
+
+.Logo-Light {
+  color: black
+}
+
+.Line {
+  margin: 0px;
+}

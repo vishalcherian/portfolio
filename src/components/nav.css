@@ -1,0 +1,19 @@
+.Nav {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width:100%;
+  float: none;
+  padding: 0rem;
+  padding-bottom: 2.5rem;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.Nav-Dark {
+  color : white
+}
+
+.Nav-Light {
+  color : black
+}

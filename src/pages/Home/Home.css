@@ -1,0 +1,45 @@
+.Home {
+  background-color: #000;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 2rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.Page-Link {
+  font-weight: 400;
+  font-size: calc(2rem + 10vmin);
+}
+
+.Content {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  z-index: -5;
+}
+
+.Link-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  /* border-style: solid;
+  border-width: 2px; */
+}
+
+@media(max-width:1018px) {
+  .Content {
+    justify-content: center;
+  }
+  .Link-Container {
+    text-align: center;
+  }
+}

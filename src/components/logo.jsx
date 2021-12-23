@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom'
+
 import './logo.css'
 
 const Logo = ( { dark = true } ) => {
-
 
   return (
     <div className={`Logo ${dark ? 'Logo-Dark' : 'Logo-Light'}`}>

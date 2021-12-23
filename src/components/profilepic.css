@@ -1,21 +1,5 @@
-.Image {
-  position: fixed;
-  width: calc(29% + 8vw);
-  z-index: 0;
-  left: calc(1rem + 8vw);
-  bottom: calc(-10rem + 20vw);
-}
-
-.Image:hover {
-  width: calc(30% + 8vw);;
-  transition: 2s width;
-}
-
 @media(max-width:1018px) {
   .Image {
-    visibility:hidden;
-    overflow: visible;
     width: 100%;
-    bottom: 0rem;
   }
 }

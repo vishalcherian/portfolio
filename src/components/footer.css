@@ -1,0 +1,19 @@
+.Footer {
+  position: relative;
+  float:none;
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: space-between;
+  width:100%;
+  float: none;
+  padding: 0rem;
+  padding-bottom: 1rem;
+}
+
+.Footer-Dark {
+  color : white
+}
+
+.Footer-Light {
+  color : black
+}

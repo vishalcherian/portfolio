@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter,
+  Switch,
   Routes,
   Route
 } from "react-router-dom";
-
+import { AnimatePresence } from 'framer-motion'
 import { 
   Home,
   Projects,
@@ -19,12 +20,14 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <AnimatePresence initial={false} exitBeforeEnter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/connect" element={<Connect />} />
         </Routes>
+      </AnimatePresence>
     </BrowserRouter>
     {/* <App /> */}
   </React.StrictMode>,

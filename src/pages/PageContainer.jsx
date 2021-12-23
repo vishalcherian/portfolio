@@ -1,11 +1,13 @@
 import Nav from '../components/nav'
 import './PageContainer.css'
 
-const PageContainer = ( { children, title, dark = true, className } ) => {
+const PageContainer = ( { children, title, dark = true, className, root = true } ) => {
   return (
-    <div className={`Container ${className}`}>
+    <div className={`Page-Container ${className}`}>
       <Nav title={title} dark={dark} />
-      {children}
+      <div className="Page-Content">
+        {children}
+      </div>
     </div>
   )
 }

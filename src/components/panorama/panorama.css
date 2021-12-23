@@ -1,0 +1,34 @@
+.Panorama {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.Panorama-Content {
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.Panorama-Content::-webkit-scrollbar {
+  display: none;
+}
+
+.Panorama-Content p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.Panorama-Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Panorama-Buttons button {
+  color: orangered;
+  font-weight: 600;
+  font-size: 1.5rem;
+}

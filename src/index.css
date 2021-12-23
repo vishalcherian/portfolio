@@ -4,12 +4,17 @@ html {
   width: 100%;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -50,6 +55,15 @@ code {
 
 .speciallink:focus {
   background-position: left;
+}
+
+.pagetitle {
+  font-size: calc(2rem + 6vmin);
+  font-weight: 400;
+}
+
+.divider-sm5 {
+  height: .5rem;
 }
 
 .expander {

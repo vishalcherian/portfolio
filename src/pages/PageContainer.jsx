@@ -1,14 +1,24 @@
-import Nav from '../components/nav'
+import { motion } from 'framer-motion'
+
+import Footer from '../components/footer/footer'
 import './PageContainer.css'
 
-const PageContainer = ( { children, title, dark = true, className, root = true } ) => {
+const PageContainer = ( { children, title, dark = true, classNameConfig = {}, root = true } ) => {
+  const {
+    pageContainerClasses = "",
+    pageContentClasses = "",
+    footerClasses = ""
+  } = classNameConfig
+
   return (
-    <div className={`Page-Container ${className}`}>
-      <Nav title={title} dark={dark} />
-      <div className="Page-Content">
+    <motion.div
+      className={`Page-Container ${pageContainerClasses}`}
+      transition={{duration: 1}}>
+      <div className={`Page-Content ${pageContentClasses}`}>
         {children}
       </div>
-    </div>
+      <Footer pageKey={title} />
+    </motion.div>
   )
 }
 

@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Space+Grotesk');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
   width: 100%;
 }
 
-button {
-  all: unset;
-  cursor: pointer;
-}
-
 body {
-  margin: 0;
   font-family: 'Space Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,9 +23,25 @@ body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-weight:400;
+  font-kerning:unset;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+element {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
+element::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 .noselect {
@@ -38,15 +54,15 @@ code {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+@media(max-width:752px) {
+  .Home {
+    justify-content: center;
+  }
+}
+
 .speciallink {
   color: #FFF;
   text-decoration: none;
-  background-image: -webkit-linear-gradient(150deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 15%,rgba(100,100,125,1) 25%,  rgba(255,0,0,1) 29%, rgba(255,226,0,1) 47%, rgba(0,255,115,1) 62%, rgba(0,26,255,1) 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 500%;
-  background-position: right;
-  transition: background-position 2s;
 }
 
 .speciallink:hover {
@@ -57,6 +73,7 @@ code {
   background-position: left;
 }
 
+/* 
 .pagetitle {
   font-size: calc(2rem + 6vmin);
   font-weight: 400;
@@ -82,4 +99,4 @@ code {
 
 .expand {
   width: 100%;
-}
+} */

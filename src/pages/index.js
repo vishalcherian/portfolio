@@ -1,11 +1,7 @@
-import About from './About/About'
 import Home from './Home/Home'
-import Projects from './Projects/Projects'
-import Connect from './Connect/Connect'
+import About from './About/About'
 
 export {
-  About,
   Home,
-  Projects,
-  Connect
+  About
 }

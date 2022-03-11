@@ -1,5 +1,5 @@
 /* BASE STYLES */
-.Footer {
+.Footer-Container {
   position: relative;
   display: flex;
   flex-direction:column;
@@ -8,8 +8,6 @@
   height: 20%;
   border-top-style: solid;
   border-top-width: 4px; 
-  /* border-top-color: rgb(57, 91, 241); */
-  color: black;
 }
 
 .Footer-Content {
@@ -17,6 +15,11 @@
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
+}
+
+.Footer-Link-Container {
+  display: flex;
+  flex-direction: row;
 }
 
 .Footer-Link {
@@ -33,11 +36,6 @@
   color : blue;
 }
 
-.Footer-Link-Container {
-  display: flex;
-  flex-direction: row;
-}
-
 .Footer-Divider {
   font-size: calc(20px + 2vmin);
   font-weight: 500;
@@ -45,9 +43,44 @@
   color: rgb(57, 91, 241)
 }
 
+/* HOME PAGE COLORS */
+.HOME-Footer-Container {
+  color: black;
+}
+
+.HOME-Footer-Link {
+  color: black;
+}
+
+.HOME-Footer-Link:hover {
+  color: blue;
+}
+
+.HOME-Footer-Divider {
+  color : black;
+}
+
+/* ABOUT PAGE COLORS */
+.ABOUT-Footer-Container {
+  color :whitesmoke
+}
+
+.ABOUT-Footer-Link {
+  color :whitesmoke
+}
+
+.ABOUT-Footer-Link:hover {
+  color :whitesmoke
+}
+
+.ABOUT-Footer-Divider {
+  color :whitesmoke
+}
+
 @media(max-width:752px) {
-  .Footer {
+  .Footer-Container {
     height: 50%;
+    padding-bottom: 1rem;
     justify-content: center;
   }
   .Footer-Content {

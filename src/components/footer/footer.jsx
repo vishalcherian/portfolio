@@ -6,29 +6,40 @@ import './footer.css'
 const linkConfig = [
   {
     title : 'home',
+    type : 'internal',
     props : {
       href : '/',
     }
   },
   {
     title : 'about',
+    type : 'internal',
     props : {
       href : '/about',
     }
   },
   {
     title : 'linkedin',
+    type : 'external',
     props : {
       target : '_blank',
-      href : '/linkedin',
-
+      href : 'https://www.linkedin.com/in/vishalmathewcherian/',
     }
   },
   {
     title : 'github',
+    type : 'external',
     props : {
       target : '_blank',
-      href : '/github',
+      href : 'https://github.com/vishalcherian',
+    }
+  },
+  {
+    title : 'medium',
+    type : 'external',
+    props : {
+      href : '#',
+      disabled : true
     }
   }
 ]
@@ -44,19 +55,24 @@ const footerContentVariants = {
   animate : { opacity : 1, y : 0, transition : { duration : .3 } },
   exit : { opacity : 0, y : '100%', transition : { ease : 'easeInOut' } }
 }
-const Footer = ( { title, dark = true, root = true } ) => {
-
+const Footer = ( { pageKey } ) => {
   const generateLinks = () => {
     return linkConfig.map( ( item, index )  => {
 
-      const { title, props : { target = "", href } } = item
-
+      const { title, type, props : { target = "", href } } = item
+      if (pageKey.toLowerCase() === title) return <></>
       return (
         <motion.div className="Footer-Link-Container" variants={footerContentVariants} key={title}>
-          <Link className={`Footer-Link ${title}-Footer-Link`} target={target} to={href}>
-            {title}
-          </Link>
-          {index !== linkConfig.length - 1 ? <p className={`Footer-Divider ${title}-Footer-Divider`}>/</p> : <></>}
+          { type === 'external' ? 
+              <a className={`Footer-Link ${pageKey}-Footer-Link`} href={href} target={target} >
+                {title}
+              </a> 
+              :
+              <Link className={`Footer-Link ${pageKey}-Footer-Link`} target={target} to={href}>
+                {title}
+              </Link>
+          }
+          {index !== linkConfig.length - 1 ? <p className={`Footer-Divider ${pageKey}-Footer-Divider`}>/</p> : <></>}
         </motion.div>
       )
     })
@@ -68,8 +84,8 @@ const Footer = ( { title, dark = true, root = true } ) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className={`noselect Footer ${title}-Footer-Container`}>
-      <div className={`Footer-Content ${title}-Footer-Content`}>
+      className={`noselect Footer-Container ${pageKey}-Footer-Container`}>
+      <div className={`Footer-Content ${pageKey}-Footer-Content`}>
         {generateLinks()}
       </div>
     </motion.div>

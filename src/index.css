@@ -8,6 +8,7 @@
 html {
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 
 body {
@@ -73,6 +74,10 @@ element::-webkit-scrollbar {
   background-position: left;
 }
 
+.spacer {
+  padding: 3rem;
+  width: auto;
+}
 /* 
 .pagetitle {
   font-size: calc(2rem + 6vmin);

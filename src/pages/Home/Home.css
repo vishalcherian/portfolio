@@ -14,16 +14,21 @@
 }
 
 .Home-Image {
+  display: none;
+  margin: 0;
+  padding : 0;
   position : absolute;
-  display : none;
-  float : none;
-  bottom : 15rem;
-  right : 10rem;
+  margin-right : 0rem;
+  margin-bottom : 0rem;
   height : auto;
-  width : 20%;
+  width : 100%;
 }
 
 .TextContainer {
   overflow-y: hidden;
 }
 
+.Home-Span {
+  font-weight:500;
+  color: blue;
+}

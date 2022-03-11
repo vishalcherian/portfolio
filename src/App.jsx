@@ -13,7 +13,6 @@ import {
 
 const App = () => {
   const location = useLocation()
-  console.log( { location } )
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}> 

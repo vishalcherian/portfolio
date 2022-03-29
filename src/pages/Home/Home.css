@@ -1,14 +1,13 @@
 .Home {
   /* background-color: rgb(30, 48, 128); */
-  background-color: rgb(222, 255, 132);
+  background-color: var(--home-bg-color);
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   display: flex;
   /* flex-direction: column;
   justify-content: flex-start; */
-  font-size: calc(8px + 5vmin);
-  /* color: rgb(192, 203, 253); */
-  color: black;
+  font-size: calc(8px + 3vmin);
+  color: var(--home-fg-color);
   margin: 0;
   overflow-x: hidden;
 }
@@ -29,6 +28,6 @@
 }
 
 .Home-Span {
-  font-weight:500;
-  color: blue;
+  font-weight:200;
+  color: var(--home-accent-color);
 }

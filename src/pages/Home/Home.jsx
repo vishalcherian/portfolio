@@ -36,7 +36,7 @@ const titleVariants = {
   animate : { 
     opacity: 1,
     y: 0,
-    transition : { duration : .3, type : 'spring', stiffness : 80, damping : 10 } 
+    transition : { duration : .3, type : 'spring', stiffness : 80, damping : 15 } 
   },
   exit : {
     opacity: 0,
@@ -47,7 +47,7 @@ const titleVariants = {
 
 const spanVariants = JSON.parse( JSON.stringify( titleVariants ) )
 console.log( spanVariants )
-const occupations = [ 'an engineer', 'a musician', 'a bad dancer', 'a human', 'hella single']
+const occupations = [ 'an engineer', 'a musician', 'a bad dancer', 'a human being', 'hella single']
 let interval = null
 
 const Home = ( { document } ) => {

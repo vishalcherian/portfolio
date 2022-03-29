@@ -62,7 +62,7 @@ const Footer = ( { pageKey } ) => {
       const { title, type, props : { target = "", href } } = item
       if (pageKey.toLowerCase() === title) return <></>
       return (
-        <motion.div className="Footer-Link-Container" variants={footerContentVariants} key={title}>
+        <motion.div className={`Footer-Link-Container ${pageKey}-Footer-Container`} variants={footerContentVariants} key={title}>
           { type === 'external' ? 
               <a className={`Footer-Link ${pageKey}-Footer-Link`} href={href} target={target} >
                 {title}

@@ -7,18 +7,48 @@
   overflow: hidden;
 }
 
-.About h1 {
-  width: 90%;
+.About p {
+  color : var(--about-body-color);
+}
+
+.About-Content {
+  display : flex;
+  flex-direction : row;
+  justify-content: space-between;
+}
+
+.About-Img {
+  width: 100%;
+}
+
+.About-Img-Container {
+  overflow: hidden;
+  margin-left: 2rem;
 }
 
 .About-Color {
-  background-color: black;
-  color : rgb(222, 255, 132);
+  background-color: var(--about-bg-color);
+  color : var(--about-fg-color);
 }
 
 @media(max-width:752px) {
   .About h1 {
     font-kerning:auto;
     width: 100%;
+  }
+
+  .About-Content {
+    flex-direction: column-reverse;
+  }
+
+  .About-Img-Container {
+    overflow:visible;
+    margin-left: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .About-Img {
+  
   }
 }
